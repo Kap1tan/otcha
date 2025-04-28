@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO)
 API_TOKEN = '7418768945:AAHI0Er_AhVS84XCuMj7jBKTNlYJsgHqp30'
 
 # Admin IDs
-ADMIN_IDS = [804644988]  # Replace with your actual admin IDs
+ADMIN_IDS = [804644988,1694080645,6959774479]  # Replace with your actual admin IDs
 
 # Initialize bot and dispatcher
 bot = Bot(token=API_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.MARKDOWN))
@@ -77,7 +77,6 @@ async def cmd_start(message: Message, state: FSMContext):
         "Здесь мы не просто печём. Мы создаём повод заглянуть к соседке. Обсудить, почему торт не поднялся, и кто же всё-таки взял последний эклер\n\n"
         "Стоимость подписки на канал:\n\n"
         "490₽ за 1 месяц\n\n"
-        f"Смотри, что пишут сами участницы 👉🏻 [ОТЗЫВЫ]({REVIEWS_LINK})\n\n"
         f"И после - присоединяйся к каналу по кнопке {bold('ОПЛАТИТЬ ДОСТУП ✅')}"
     )
 
@@ -93,8 +92,7 @@ async def cmd_start(message: Message, state: FSMContext):
     # Send second message with buttons
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="Оплатить доступ ✅", callback_data="pay_access"),
-            InlineKeyboardButton(text="Посмотреть отзывы ❤️", url=REVIEWS_LINK)
+            InlineKeyboardButton(text="Оплатить доступ ✅", callback_data="pay_access")
         ]
     ])
 
@@ -212,8 +210,7 @@ async def back_to_menu(callback: CallbackQuery, state: FSMContext):
     # Recreate the main menu
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [
-            InlineKeyboardButton(text="Оплатить доступ ✅", callback_data="pay_access"),
-            InlineKeyboardButton(text="Посмотреть отзывы ❤️", url=REVIEWS_LINK)
+            InlineKeyboardButton(text="Оплатить доступ ✅", callback_data="pay_access")
         ]
     ])
 
@@ -255,8 +252,7 @@ async def send_reminders():
 
                 keyboard = InlineKeyboardMarkup(inline_keyboard=[
                     [
-                        InlineKeyboardButton(text="Оплатить доступ ✅", callback_data="pay_access"),
-                        InlineKeyboardButton(text="Посмотреть отзывы ❤️", url=REVIEWS_LINK)
+                        InlineKeyboardButton(text="Оплатить доступ ✅", callback_data="pay_access")
                     ]
                 ])
 
