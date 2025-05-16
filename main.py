@@ -251,7 +251,7 @@ async def send_reminders():
 
                 keyboard = InlineKeyboardMarkup(inline_keyboard=[
                     [
-                        InlineKeyboardButton(text="Оплатить доступ ✅", callback_data="pay_access")
+                        InlineKeyboardButton(text="Оплатить доступ ✅", url="https://t.me/tribute/app?startapp=ssXR")
                     ]
                 ])
 
@@ -269,7 +269,6 @@ async def send_reminders():
 
         # Check every hour
         await asyncio.sleep(3600)
-
 
 # Admin command handlers
 @admin_router.message(Command(commands="admin"))
