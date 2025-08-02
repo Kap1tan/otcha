@@ -25,7 +25,7 @@ from aiogram.utils.markdown import bold, italic, underline
 logging.basicConfig(level=logging.INFO)
 
 # Bot token to be replaced with your actual token
-API_TOKEN = '7418768945:AAHI0Er_AhVS84XCuMj7jBKTNlYJsgHqp30'
+API_TOKEN = '7418768945:AAEURvaywFpF8M8eMsNdC1NBaCIGl0YICQI'
 
 # Admin IDs
 ADMIN_IDS = [804644988,1694080645,6959774479]  # Replace with your actual admin IDs
@@ -357,3 +357,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
